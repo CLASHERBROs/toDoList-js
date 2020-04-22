@@ -7,7 +7,20 @@ while(input!=="quit")
 if(input==="new")
 {todo.push(prompt("Enter a new todo"))
 }
-else if(input=="list")
+else if(input=="delete"){
+    var del = prompt("What do you want to delete?")
+    todo.forEach(function(color){
+if(color==del)
 {
-    console.log(todo)
+    var index = todo.indexOf(color);
+    todo.splice(index,1);
+}
+    });
+}
+else if(input=="list")
+{ todo.forEach(function(color){
+    console.log(color)
+}
+    
+    );
 } }},500)
